@@ -1,11 +1,15 @@
 #This function will download and resize all images in the imageLinks folder and will split into train and test folders with their associated label.
 
 #Editor's note: It is your responsibility to ensure that use of copyrighted images accessed in connection with this script complies with any license restrictions that may apply.
+import os
+
 
 copyLabels = True
 trainPercent = 0.85
 
-listing = os.listdir(linksPath) 
+linksPath = 'images'
+
+listing = os.listdir(linksPath)
 for classes in listing:
     os.chdir(linksPath)
     text = open(classes, 'r')
